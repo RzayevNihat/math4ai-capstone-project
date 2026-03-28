@@ -1,0 +1,20 @@
+{
+  "softmax": {
+    "selected_epoch": 120,
+    "train_loss": 0.2096476541281362,
+    "train_accuracy": 0.9125,
+    "val_loss": 0.2013363275896587,
+    "val_accuracy": 0.925,
+    "test_loss": 0.15268483491027604,
+    "test_accuracy": 0.95
+  },
+  "nn": {
+    "selected_epoch": 200,
+    "train_loss": 0.21035734884279567,
+    "train_accuracy": 0.9125,
+    "val_loss": 0.20025047884466837,
+    "val_accuracy": 0.925,
+    "test_loss": 0.15252544025599604,
+    "test_accuracy": 0.95
+  }
+}
