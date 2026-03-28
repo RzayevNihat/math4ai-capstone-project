@@ -1,0 +1,64 @@
+{
+  "probabilities_sum_to_one": {
+    "passed": true,
+    "min_row_sum": 0.9999999999999999,
+    "max_row_sum": 1.0000000000000002
+  },
+  "loss_decreases_on_tiny_subset": {
+    "passed": true,
+    "initial_loss": 2.302496423705812,
+    "final_loss": 2.149138513038981
+  },
+  "tiny_subset_overfit": {
+    "passed": true,
+    "best_epoch": 500,
+    "tiny_subset_accuracy": 1.0
+  },
+  "nan_inf_check": {
+    "passed": true,
+    "has_nan": false,
+    "has_inf": false
+  },
+  "gradient_checks": [
+    {
+      "param": "W1",
+      "index": [
+        0,
+        0
+      ],
+      "analytic_grad": 3.0471707975443137e-07,
+      "numeric_grad": 3.0471181133862046e-07,
+      "relative_error": 8.644840912379825e-06
+    },
+    {
+      "param": "W1",
+      "index": [
+        3,
+        5
+      ],
+      "analytic_grad": -0.00014902451499712523,
+      "numeric_grad": -0.0001490245038482385,
+      "relative_error": 3.7406218485572305e-08
+    },
+    {
+      "param": "W2",
+      "index": [
+        0,
+        0
+      ],
+      "analytic_grad": 0.00034495538361632277,
+      "numeric_grad": 0.000344955353170917,
+      "relative_error": 4.412948534019299e-08
+    },
+    {
+      "param": "W2",
+      "index": [
+        2,
+        4
+      ],
+      "analytic_grad": 0.001044613636901416,
+      "numeric_grad": 0.0010446136400332762,
+      "relative_error": 1.4990519495535523e-09
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "final_config": {
+    "hidden_dim": 32,
+    "optimizer": "adam",
+    "lr": 0.001,
+    "reg_lambda": 0.0001,
+    "batch_size": 64,
+    "epochs": 200,
+    "checkpoint_policy": "best_val"
+  },
+  "runs": [
+    {
+      "seed": 11,
+      "best_epoch": 195,
+      "test_accuracy": 0.9483695652173914,
+      "test_loss": 0.16972808437179068
+    },
+    {
+      "seed": 22,
+      "best_epoch": 200,
+      "test_accuracy": 0.9565217391304348,
+      "test_loss": 0.17120132611512562
+    },
+    {
+      "seed": 33,
+      "best_epoch": 199,
+      "test_accuracy": 0.9565217391304348,
+      "test_loss": 0.15102458037997246
+    },
+    {
+      "seed": 44,
+      "best_epoch": 198,
+      "test_accuracy": 0.9510869565217391,
+      "test_loss": 0.18253775152066518
+    },
+    {
+      "seed": 55,
+      "best_epoch": 200,
+      "test_accuracy": 0.9565217391304348,
+      "test_loss": 0.17146985351228253
+    }
+  ],
+  "mean_test_accuracy": 0.9538043478260869,
+  "ci95_test_accuracy": 0.004770914556862725,
+  "mean_test_loss": 0.1691923191799673,
+  "ci95_test_loss": 0.01412323404783243
+}
