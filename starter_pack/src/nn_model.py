@@ -83,7 +83,8 @@ class OneHiddenLayerNN:
             elif name == "b2": self.b2 += self.velocity[name]
 
     def step_adam(self, lr=0.001, beta1=0.9, beta2=0.999, eps=1e-8):
-        if not self.m:
+        # Explicit None check — safer and clearer
+        if self.m is None:
             self.m = {
                 "W1": np.zeros_like(self.W1),
                 "b1": np.zeros_like(self.b1),
@@ -109,10 +110,15 @@ class OneHiddenLayerNN:
             v_hat = self.v[name] / (1 - beta2 ** self.t)
 
             update = lr * m_hat / (np.sqrt(v_hat) + eps)
-            if name == "W1": self.W1 -= update
-            elif name == "b1": self.b1 -= update
-            elif name == "W2": self.W2 -= update
-            elif name == "b2": self.b2 -= update
+
+            if name == "W1":
+                self.W1 -= update
+            elif name == "b1":
+                self.b1 -= update
+            elif name == "W2":
+                self.W2 -= update
+            elif name == "b2":
+                self.b2 -= update
 
     def update(self, optimizer="sgd", lr=0.05, momentum_beta=0.9,
                beta1=0.9, beta2=0.999, eps=1e-8):
